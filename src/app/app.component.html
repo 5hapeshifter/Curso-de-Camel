@@ -1,0 +1,102 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" >Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/usuarios/usuario-list']" routerLinkActive="active" >Usuários</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/pokemons/pokemon-list']" routerLinkActive="active" >Pokemons</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/crud/crud-list']" routerLinkActive="active" >CRUD</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/crud2/crud2-list']" routerLinkActive="active" >CRUD2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/crud3-list']" routerLinkActive="active" >CRUD3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/produtos/produto-list']" routerLinkActive="active" >Produtos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/formularios/meuform']" routerLinkActive="active" >Formulários</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/auth/validar']" routerLinkActive="active" >Validar</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <!--  ROUTER  -->
+    <router-outlet></router-outlet>
+  </div>
+
+
+
+
+
+<!-- <h2> Angular 12 </h2> -->
+<!-- EXEMPLOS DE INTERPOLAÇÃO - SEMPRE DO TS PARA O HTML -->
+<!-- <p> {{ salario }} </p> vai exibir o valor atribuído a variável salario que está no arquivo .ts -->
+
+<!-- <p> {{ title }} </p> -->
+
+<!-- <p> {{ mostraMensagem() }} </p> -->
+
+<!-- <p> {{ 1 + 2 }} </p> -->
+
+<!-- <p> <input type ="text" value="{{title}}"></p>  -->
+
+<!-- EXEMPLOS DE PROPERTY BINDING - SEMPRE DO TS PARA O HTML -->
+
+<!-- <p> <input type ="text" [value]="title"></p><!-- Aqui estamos dizendo para o JS pegar a propriedade "value" 
+    da variável "title" colocar em value(tem que estar marcado entre colchetes) -->
+
+<!-- <p> <input type ="text" [value]="mostraMensagem()"></p> -->
+
+<!-- EXEMPLOS DE EVENT BINDING - SEMPRE DO HTML PARA O TS, ESTÁ SEMPRE RELACIONADO A ALGUMA AÇÃO QUE ACIONA ALGO(FUNÇÕES) NO TS, EX: CLICK -->
+
+<!-- <p> <button class="btn btn-primary" (click)="meuClique()" > Clique aqui </button></p> -->
+
+<!-- aqui estamos captando o que o usuario está digitando com "$event.target.value" -->
+<!-- <p> <input type ="text" #titleInput (keyup)="onKeyUp(titleInput.value)" [value]="mostraMensagem()"></p> -->
+
+<!-- <p>{{ titleInput.value }}</p> -->
+
+<!-- EXEMPLOS DE TWO WAY DATA BINDING - FAZ O CAMINHO DAS DUAS VIA ENTRE TS E HTML -->
+
+<!-- <p> <input class="form-control" type ="text" [(ngModel)]="title"></p>  -->
+
+<!-- <app-primeiro></app-primeiro> <!-- estamos chamando o seletor do componente "primeiro" 
+    e podemos chamar quantas vezes quisermos --> 
+
+<!-- <app-pokemon-list></app-pokemon-list>  -->

@@ -1,0 +1,26 @@
+<p>usuario-list works!</p>
+
+<app-usarios-detalhe 
+    [usuariosFilho]="usuarioSelecionado" 
+    (usuarioEmitter)="onUsuarioEmitter($event)" 
+    (usuarioSalvarEmitter)="onUsuarioSalvarEmitter($event)"
+    >
+</app-usarios-detalhe>
+
+<table class="table"><!-- aqui estamos usando a class "table" do Bootstrap -->
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>CPF</th>
+        <th>Ações</th>
+    </tr>
+
+    <tr *ngFor="let u of usuarios"> <!-- aqui estamos usando o "forEach" com a diretiva " *ngFor "-->
+        <td>{{ u.id }}</td>
+        <td>{{ u.nome }}</td>
+        <td>{{ u.email }}</td>
+        <td>{{ u.cpf | cpf }}</td>
+        <td><button class="btn btn-info" (click)="onSelecionarClick(u)"> Selecionar </button></td>
+    </tr>   
+</table>

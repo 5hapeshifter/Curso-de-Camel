@@ -1,0 +1,23 @@
+
+<table class="table">
+
+    <tr>
+        <th> ID </th>
+        <th> Nome </th>
+        <th> Descrição </th>
+        <th> Status </th>
+        <th> Ações </th>
+    </tr>
+
+    <tr *ngFor="let u3 of usuarios3?.data">
+        <td> {{ u3.id }} </td>
+        <td> {{ u3.name }} </td>
+        <td> {{ u3.description }} </td>
+        <td> {{ u3.status }} </td>
+        <td>
+            <button class="btn btn-primary mr-2"> Editar </button>
+            <button class="btn btn-danger" (click)="delete3( u3.id )"> Deletar </button>
+        </td>
+    </tr>
+
+</table>

@@ -1,0 +1,29 @@
+<p>primeiro works!</p>
+
+{{nome}}
+
+<p [innerHtml]="nome">texto</p>
+
+<!-- <input type="text" (keyup)="mostrarMensagem(texto.value)" #texto [(ngModel)]="nome" > //variável marcada com o ID "#texto", podemos usar "keyup" no lugar do "change" -->
+<input type="text" #texto [(ngModel)]="nome" >
+
+<button (click)="mostrarMensagem(texto.value)" >Clique aqui</button><!-- imprimindo o valor inserido na variável "texto" -->
+
+<!-- <app-usuario-list ></app-usuario-list>aqui estamos usando o property bind para atribuir a variável "usuáriosFilho" os valores que estão em "usuários" -->
+
+<div class="row"> <!-- a classe row(do Bootstrap) mantém td na mesma linha -->
+    <div class="col-3"><!-- o sistema de grid do bootstrap divide as linhas em 12 espaços de tamanhos iguais, com o "col" conseguimos alterar o tamanho dos espaços, 
+        nesse caso que definimos como "3", ele esta somando 3 espaços e formando um novo espaço, QUANDO USARMOS NA MESMA LINHA, A SOMA SEMPRE TEM QUE SER 12-->
+        <button (click)="alteraString()" 
+            class="btn btn-primary btn-lg tamanho-maior" >
+            BTN 1
+        </button>
+    </div>
+    
+    <div class="col-8">
+        <button [class] ="minhaClasse" *ngIf=" minhaClasse == 'btn-success' "> BTN 2 </button> <!-- "*ngIf"(destruir o elemento) é uma diretiva para alterar as propriedades do elemento, nós podemos
+        colocar essa diretiva dentro de um elemento, nesse caso se a condição for verdadeira o botão aparecerá, senão não -->
+    </div>
+    
+
+</div>

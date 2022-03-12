@@ -1,0 +1,23 @@
+<div class="row lg-12 float-right mt-3 mb-3">    
+    <button [routerLink]="['/crud2/crud2-form']" class="btn btn-success">Novo</button>        
+</div>
+
+<table class="table">
+    <tr>
+        <th> ID </th>
+        <th> Nome </th>
+        <th> Descrição </th>
+        <th> Status </th>
+        <th> Ações </th>
+    </tr>
+    <tr *ngFor="let u2 of usuarios2?.data">
+        <td> {{ u2.id }} </td>
+        <td> {{ u2.name }} </td>
+        <td> {{ u2.description }} </td>
+        <td> {{ u2.status }} </td>
+        <td>
+            <button class="btn btn-info mr-2" [routerLink]="['/crud2/crud2-form', u2.id]" routerLinkActive="router-link-active" > Editar </button>
+            <button class="btn btn-danger" (click)="onDelete2( u2.id )"> Deletar </button>
+        </td>
+    </tr>
+</table>

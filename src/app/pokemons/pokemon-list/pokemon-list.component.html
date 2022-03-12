@@ -1,0 +1,19 @@
+<app-pokemon-detalhe [pokemonFilho]="pokemonSelecionado"></app-pokemon-detalhe>
+
+<table class="table" >
+    <tr>
+       <th>Nome</th> 
+       <th>URL</th> 
+       <th>Ações</th> 
+    </tr>
+    <tr *ngFor="let p of pokemons?.results">
+        <td>{{ p | json | uppercase }}</td>
+        <td> {{ p.url }}</td>
+        <td> <button (click)="selecionarPokemon( p.url )"> Selecionar </button>  </td>
+    </tr>
+</table>
+
+<div class="row">
+    <button class="btn btn-primary" (click)="proximaPagina()">Próxima Página</button>
+    <button class="btn btn-primary" (click)="anteriorPagina()">Página Anterior</button>
+</div>

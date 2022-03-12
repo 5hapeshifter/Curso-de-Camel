@@ -1,0 +1,7 @@
+.tamanho-maior{
+    width: 120px;
+    /* margin-right: 10px; estamos colocando uma margem de 10 pixels */ 
+}
+.row{
+    margin-top: 18px !important;/*aqui estamos forçando a sobrescrita da propriedade "margin-top" da classe "row" com o "!important"*/
+}
